@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Flw-F1-eYY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Link View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LinkViewController" customModule="WebPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDQ-Uo-gXj">
+                                <rect key="frame" x="180" y="432.5" width="54.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Link "/>
+                                <connections>
+                                    <action selector="linkBtnPressed:" destination="HSQ-bO-n7h" eventType="touchUpInside" id="Tdv-ru-eJe"/>
+                                    <action selector="linkBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gph-Az-2Rd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XDQ-Uo-gXj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JcA-1Y-AYn"/>
+                            <constraint firstItem="XDQ-Uo-gXj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iGE-HZ-b4s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UvP-aB-htj"/>
+                    <connections>
+                        <outlet property="linkBtn" destination="XDQ-Uo-gXj" id="gCf-ze-rt4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="HSQ-bO-n7h" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="-32"/>
+        </scene>
+        <!--Safari-->
+        <scene sceneID="wo5-Rd-jZc">
+            <objects>
+                <navigationController id="Lhb-Ix-J6N" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Safari" id="g2J-TY-V0D"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m8f-K9-Bhe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qXm-F5-1hd" kind="relationship" relationship="rootViewController" id="ScY-QL-2XL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOC-x5-D4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="642"/>
+        </scene>
+        <!--Safari View Controller-->
+        <scene sceneID="cab-fm-Td9">
+            <objects>
+                <viewController id="qXm-F5-1hd" customClass="SafariViewController" customModule="WebPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hR-Mn-MSv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h5-k1-abd">
+                                <rect key="frame" x="176.5" y="432.5" width="61.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Safari"/>
+                                <connections>
+                                    <action selector="SafariBtnPressed:" destination="qXm-F5-1hd" eventType="touchUpInside" id="jQf-TO-6Sj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bW8-Yp-g6C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8h5-k1-abd" firstAttribute="centerY" secondItem="2hR-Mn-MSv" secondAttribute="centerY" id="bv4-uf-CIi"/>
+                            <constraint firstItem="8h5-k1-abd" firstAttribute="centerX" secondItem="2hR-Mn-MSv" secondAttribute="centerX" id="thC-4Z-35w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zUT-HL-4CK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJz-6T-3sl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="642"/>
+        </scene>
+        <!--WKWebView-->
+        <scene sceneID="P6I-5S-zhL">
+            <objects>
+                <navigationController id="A83-hA-r54" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="WKWebView" id="zI3-q1-yXa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mf6-ox-48E">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OB3-wz-Iub" kind="relationship" relationship="rootViewController" id="BuO-al-HGf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6x-Ho-r3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="-710"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="hMr-wZ-9W8">
+            <objects>
+                <viewController id="OB3-wz-Iub" customClass="WKWebViewController" customModule="WebPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IOW-ja-exx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9Q-bM-PP9">
+                                <rect key="frame" x="119.5" y="432.5" width="175" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Web Page WKWebView"/>
+                                <connections>
+                                    <action selector="WKWebBtnPressed:" destination="OB3-wz-Iub" eventType="touchUpInside" id="mDS-hM-u23"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kmv-4w-4iH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J9Q-bM-PP9" firstAttribute="centerX" secondItem="IOW-ja-exx" secondAttribute="centerX" id="7Wp-vt-4Dw"/>
+                            <constraint firstItem="J9Q-bM-PP9" firstAttribute="centerY" secondItem="IOW-ja-exx" secondAttribute="centerY" id="ZvL-H5-QJr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eaU-fT-oVN"/>
+                    <connections>
+                        <segue destination="qjq-hP-UST" kind="show" identifier="ToWebView" id="bRl-Vq-FeE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P01-sJ-Bbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="-710"/>
+        </scene>
+        <!--Link-->
+        <scene sceneID="159-sh-4AR">
+            <objects>
+                <navigationController id="r7o-k8-mam" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Link" id="XTI-eI-9b6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="32Y-Pk-C2k">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Zk6-o4-jOk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMx-wo-e1O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="-32"/>
+        </scene>
+        <!--Web Segue View Controller-->
+        <scene sceneID="9sx-cs-bza">
+            <objects>
+                <viewController id="qjq-hP-UST" customClass="WebSegueViewController" customModule="WebPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oSi-xp-Zak">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ps3-fj-B7h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oeb-4Z-Sbr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kks-je-hGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201" y="-710"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="G1K-IK-0i8">
+            <objects>
+                <tabBarController id="Flw-F1-eYY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RZK-ji-hF1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="r7o-k8-mam" kind="relationship" relationship="viewControllers" id="cJU-kD-E0P"/>
+                        <segue destination="A83-hA-r54" kind="relationship" relationship="viewControllers" id="nhO-On-9Kq"/>
+                        <segue destination="Lhb-Ix-J6N" kind="relationship" relationship="viewControllers" id="Ygd-ES-a6m"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUT-Dd-5GI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1609" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
